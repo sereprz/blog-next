@@ -23,7 +23,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
+      <h1>now</h1>
       <a
         target="_blank"
         href="/rss.xml"
@@ -40,36 +40,48 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </svg>
         <span class="sr-only">RSS Feed</span>
       </a>
-
+      <br/> Last update: April 11th, 2025
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
+        <ul class="list-disc pl-6">
+          <li>Home is Toronto</li>
+          <li>building 1RG (<LinkButton
+              className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+              href="https://1rg.space"
+            >
+              Space
+            </LinkButton>,
+            <LinkButton
+              className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+              href="https://labs.1rg.space"
+            >
+              Labs
+            </LinkButton>)</li>
+          <li>moving my body: yoga, cycling, rowing, strength training</li>
+          <li>reading: The mushroom at the end of the world (Anna Tsing), Young Queens (Leah Chang)</li>
+        </ul>
       </p>
       <p>
-        Read the blog posts or check
-        <LinkButton
-          className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
+        This page was inspired by <LinkButton
+        className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
+        href="https://nownownow.com/about"
+      >
+        nownownow.com
+      </LinkButton>.
       </p>
-      {
+      <!-- {
         // only display if at least one social link is enabled
         socialCount > 0 && (
           <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
+            <div class="social-links">Find me elsewhere:</div>
             <Socials />
           </div>
         )
-      }
+      } -->
     </section>
 
     <Hr />
 
-    {
+    <!-- {
       featuredPosts.length > 0 && (
         <>
           <section id="featured">
@@ -87,9 +99,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           {recentPosts.length > 0 && <Hr />}
         </>
       )
-    }
+    } -->
 
-    {
+    <!-- {
       recentPosts.length > 0 && (
         <section id="recent-posts">
           <h2>Recent Posts</h2>
@@ -107,11 +119,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           </ul>
         </section>
       )
-    }
+    } -->
 
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
-        All Posts
+        more
         <svg xmlns="http://www.w3.org/2000/svg"
           ><path
             d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
@@ -130,7 +142,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply pb-6 pt-8;
   }
   #hero h1 {
-    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+    @apply my-4 inline-block text-3xl font-bold sm:my-2 sm:text-5xl;
   }
   #hero .rss-link {
     @apply mb-6;
@@ -139,7 +151,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
   }
   #hero p {
-    @apply my-2;
+    @apply my-6;
   }
   .social-wrapper {
     @apply mt-4 flex flex-col sm:flex-row sm:items-center;
